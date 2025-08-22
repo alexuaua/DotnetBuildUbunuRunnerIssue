@@ -1,4 +1,4 @@
-name: Deploy test for Linux runner
+name: Deploy test for Linux runner (Detailed logs)
 on:
   workflow_dispatch:
   push:
@@ -30,7 +30,5 @@ jobs:
           dotnet --version
 
       - name: Build AppHost
-        run: dotnet build ./BlazorApp1/BlazorApp1/BlazorApp1.csproj
-        
-#  For detailed logs add: `-v detailed`
+        run: dotnet build ./BlazorApp1/BlazorApp1/BlazorApp1.csproj -v detailed
         
